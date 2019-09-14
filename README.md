@@ -9,6 +9,9 @@ These instructions will get you a copy of the project up and running on your loc
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running.
+```
+$ yarn add // To add dependencies 
+```
 
 ```
 $ yarn run start // To start local development server 
