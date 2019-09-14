@@ -1,0 +1,316 @@
+ul { 
+  list-style: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 2000;
+
+  .nav-bar-wrapper {
+    background-color: $black;
+
+    .nav-bar {
+      display: grid;
+      margin: 0 17vw;
+  
+      .menu {
+        display: grid;
+        grid-auto-flow: column;
+
+        .add-movie-btn {
+          font-size: 1.1vw;
+        }
+
+        .dropdown-toggle {
+          font-size: 0.9vw;
+          font-weight: bold;
+          background: transparent;
+        }
+
+        .login-btn {
+          border: none;
+        }
+
+        .language-btn {
+          border: 1px solid $white;
+          height: 2vw;
+          width: 2.5vw;
+          padding: 0;
+        }
+
+        .dropdown-toggle::after {
+          display: none;
+        }
+
+        li {
+          align-self: center;
+          text-align: center;
+        }
+  
+        a:hover, 
+        .login-btn:hover, 
+        .add-movie-btn:hover, 
+        .language-btn:hover {
+          text-decoration: none;
+          color: $lightGreen;
+          cursor: pointer;
+        }
+
+        .logo {
+          width: 4.8vw;
+          height: auto;
+        }
+      }
+  
+      .top-menu {
+        font-size: 0.7vw;
+        padding-left: 38vw;
+        padding-top: 1vw;
+
+        a {
+          color: $gray;
+          font-size: 0.7vw;
+        }
+      }
+  
+      .main-menu-wrapper {
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 10vw;
+        margin-top: -1.5vw;
+
+        .main-menu-link, li {
+          color: $white;
+          font-size: 0.9vw;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .search-bar-wrapper {
+    display: grid;
+    border-bottom: 1px solid $gray;
+    background-color: $white;
+    grid-auto-flow: column;
+  }
+
+  .search-icon {
+    color: $gray;
+    margin-right: 0.5vw;
+    font-size: 1.5vw;
+    justify-self: end;
+    align-self: center;
+  }
+
+  .search-icon:hover {
+    color: $black;
+    cursor: pointer;
+  }
+
+  .search-bar-input {
+    width: 55vw;
+    height: 3vw;
+    outline: none;
+    border: none;
+    font-size: 1vw;
+    font-style: italic;
+  }
+}
+
+main {
+  display: grid !important;
+  padding-top: 12vw;
+  margin: 0 25vw 15vw 25vw;
+  grid-template-areas: 
+  "top-content aside-content"
+  "main-content aside-content";
+  grid-gap: 2vw;
+  height: 40vw;
+
+  .dropdown-toggle {
+    width: 6vw;
+    height: auto;
+    background-color: transparent;
+    color: #000;
+    font-size: 0.8vw;
+    border-radius: 2vw/0.5vw;
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  .top-content {
+    grid-area: top-content;
+
+    .buttons-menu-wrapper {
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 1vw;
+    }
+
+    .active-btn, .btn-secondary:hover {
+      background-color: $topBtnBgHover;
+      color: $lightGreen;
+    }
+  }
+
+  .main-content {
+    grid-area: main-content;
+    background-image: url('../img/default_movie.jpg');
+    background-size: cover;
+    box-shadow: 0 0 10px $shadowColor;
+
+    p {
+      margin: 0;
+    }
+
+    .movie-wrapper {
+      display: grid;
+      grid-template-columns: auto auto;
+
+      .movie-poster {
+        height: 30vw;
+      }
+
+      .movie-info {
+        display: grid;
+        grid-template-rows: auto auto 20%;
+        
+        .movie-header {
+          display: grid;
+          grid-template-columns: 14% auto;
+          padding: 1vw;
+          height: 0.9vw;
+          grid-gap: 1vw;
+    
+          .movie-title {
+            font-size: 1.2vw;
+            font-weight: bold;
+          }
+        }
+        
+        .movie-overview {
+          padding: 0 5%;
+          font-size: 1vw;
+        }
+      
+        .more-info {
+          padding: 6% 4%;
+
+          button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+          }
+
+          button:hover {
+            color: $lightGreen;
+          }
+        }
+      }
+    }
+
+    .more-info-menu {
+      display: grid;
+      grid-template-columns: auto auto;
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  .aside-content {
+    grid-area: aside-content;
+    border-left: 1px solid $gray;
+
+    .btn-secondary {
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid $gray;
+      margin-left: 1vw; 
+    }
+
+    .active-btn, .btn-secondary:hover {
+      border-bottom: 3px solid $lightGreen;
+      background-color: transparent !important; 
+      color: #000 !important; 
+    }
+  }
+}
+
+footer {
+  height: 27vw;
+  background-image: url(https://www.themoviedb.org/assets/2/v4/footers_v2/MadMaxFuryRoad-9f17bec5f89e26e60ad1e3af8ae17ea7a2e6921e005477046046da2fab832ce8.jpg), 
+  radial-gradient(at 30% top, rgba(7, 64, 52, 1) 0%, rgba(8, 28, 36, 1) 70%);
+  background-size: cover;
+
+  .footer-nav {
+    display: grid;
+    grid-auto-flow: column;
+    color: $white;
+    padding: 9vw 15vw 0 15vw;
+    grid-gap: 5vw;
+  
+    .join {
+      display: grid;
+      justify-items: end;
+
+      .logo {
+        width: 8vw;
+        margin-top: -2.5vw;
+      }
+
+      button {
+        width: 12vw;
+        height: 2.5vw;
+        background-color: $white;
+        border: none;
+        border-radius: 0.5vw;
+        font-weight: bold;
+        color: $lightGreen;
+        outline: none;
+        font-size: 0.9vw;
+      } 
+
+      button:hover {
+        background-color: $lightGreen;
+        color: $white;
+      }
+
+      button:active {
+        transform: scale(0.98);
+      }
+    }
+
+    .footer-menus {
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 2vw;
+
+      h3 {
+        font-size: 1.2vw;
+        font-weight: bold;
+      }
+  
+      a {
+        color: $white;
+      }
+  
+      ul {
+        padding: 0;
+        font-size: 0.9vw;
+      }
+  
+      a:hover {
+        text-decoration: none;
+        color: $lightGreen;
+      }
+    }
+  }
+
+  .fa-certificate {
+    font-size: 0.8vw;
+  }
+}

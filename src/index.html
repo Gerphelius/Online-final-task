@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>The Movie DB</title>
+</head>
+
+<body>
+  <header>
+    <div class="nav-bar-wrapper">
+      <nav class="nav-bar">
+        <ul class="top-menu menu">
+          <li><a href="#">Apps</a></li>
+          <li><a href="#">Forums</a></li>
+          <li><a href="#">Leaderboard</a></li>
+          <li><a href="#">Contribute</a></li>
+          <li><a href="#">API</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+        <div class="main-menu-wrapper">
+          <ul class="left-menu menu">
+            <li><a class="main-menu-link" href="#"><img class="logo" src="./img/movie_db_logo.svg" alt="logo"></a></li>
+            <li><a class="main-menu-link" href="#">DISCOVER</a></li>
+            <li><a class="main-menu-link" href="#">MOVIES</a></li>
+            <li><a class="main-menu-link" href="#">TV SHOWS</a></li>
+            <li><a class="main-menu-link" href="#">PEOPLE</a></li>
+          </ul>
+          <ul class="login-signup menu">
+            <li><i class="fas fa-plus add-movie-btn"></i></li>
+            <li>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle language-btn" type="button" id="dropdownMenu2"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  EN
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <button class="dropdown-item en" type="button">EN</button>
+                  <button class="dropdown-item ru" type="button">RU</button>
+                  <button class="dropdown-item ua" type="button">UA</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle login-btn" type="button" id="dropdownMenuButton"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  LOGIN
+                </button>
+                <div class="dropdown-menu">
+                  <form class="px-4 py-3">
+                    <div class="form-group">
+                      <label for="exampleDropdownFormEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleDropdownFormEmail1"
+                        placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleDropdownFormPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleDropdownFormPassword1"
+                        placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                        <label class="form-check-label" for="dropdownCheck">
+                          Remember me
+                        </label>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                  </form>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">New around here? Sign up</a>
+                  <a class="dropdown-item" href="#">Forgot password?</a>
+                </div>
+              </div>
+            </li>
+            <li><a class="main-menu-link" href="#">SIGN UP</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="search-bar-wrapper">
+      <i class="fas fa-search search-icon"></i>
+      <input class="search-bar-input" type="text" placeholder="Search for a movie, tv show, person...">
+    </div>
+  </header>
+  <main>
+    <div class="top-content">
+      <div class="year-btns"></div>
+    </div>
+    <div class="main-content">
+      <div class='movie-wrapper'>
+        <div class="movie-poster"></div>
+        <div class="movie-info">
+          <div class='movie-header'>
+            <div class='movie-rating'></div>
+            <div class='title-date'>
+              <p class='movie-title'></p>
+              <p class='movie-release-date'></p>
+            </div>
+          </div>
+          <p class='movie-overview'></p>
+          <div class='more-info'>
+            <div class="more-info-btn"></div>
+          </div>
+        </div>
+      </div>
+      <div class="more-info-menu">
+        <div class="language">
+          <p class="original-language"></p>
+          <p class="language-text"></p>
+        </div>
+        <div class="movie-popularity-wrapper">
+          <p class="movie-popularity-text"></p>
+          <div class="movie-stars"></div>
+        </div>
+      </div>
+    </div>
+    <aside class="aside-content">
+      <div class="year-btns"></div>
+    </aside>
+  </main>
+  <footer>
+    <nav class="footer-nav">
+      <div class="join">
+        <img class="logo" src="./img/movie_db_logo.svg" alt="logo">
+        <button id="btn-join">JOIN THE COMMUNITY</button>
+      </div>
+      <div class="footer-menus">
+        <div class="basics footer-menu">
+          <h3>THE BASICS</h3>
+          <ul>
+            <li><a href="#">About TMDb</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Support Forums</a></li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="involved footer-menu">
+          <h3>GET INVOLVED</h3>
+          <ul>
+            <li><a href="#">
+                <i class="fas fa-certificate"></i>
+                Contribution Bible
+              </a>
+            </li>
+            <li><a href="#">3rd Party Applications</a></li>
+            <li><a href="#">Add new movie</a></li>
+            <li><a href="#">Add new TV Show</a></li>
+          </ul>
+        </div>
+        <div class="community footer-menu">
+          <h3>COMMUNITY</h3>
+          <ul>
+            <li><a href="#">Guidelines</a></li>
+            <li><a href="#">Leaderboard</a></li>
+            <li><a href="#">Forums</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+        <div class="legal footer-menu">
+          <h3>LEGAL</h3>
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </footer>
+</body>
+
+</html>
