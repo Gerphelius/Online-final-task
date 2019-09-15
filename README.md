@@ -1,6 +1,6 @@
 # Online Final Task
 
-MovieDB site that provades some movies info to user
+MovieDB site that provides some movies info to user
 
 ## Getting Started
 
